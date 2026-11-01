@@ -23,7 +23,7 @@
 }
 
 .Author-Name {
-    font-family: "Figtree";
+    font-family: "Figtree", sans-serif;
     color: var(--text-preset-3);
     font-size: 0.875rem;
     font-weight: 800;
@@ -73,7 +73,7 @@ body{
     background-color: var(--bkg-color);
     max-width: 82px;
     max-height: 29px;
-    font-family: "Figtree";
+    font-family: "Figtree", sans-serif; /* The font-family has a generic fallback, called sans-serif, for if the required font family is unavailable. */
     color: var(--text-preset-3);
     font-size: 0.875rem;
     font-weight: 800;
@@ -86,7 +86,7 @@ body{
 }
 
 .Publication {
-    font-family: "Figtree";
+    font-family: "Figtree", sans-serif;
     color: var(--text-preset-3);
     font-size: 0.875rem;
     font-weight: 500;
@@ -96,25 +96,20 @@ body{
 }
 
 .Title {
-    font-family: "Figtree";
+    font-family: "Figtree", sans-serif;
     color: var(--text-preset-3);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem,4.8vw,1.5rem); /* The clamp() function compares the pixel value of ...vw against lower and upper bound pixel values. I want the font size to start changing gradually at 500px from 24 to 20, so 24/500 *100% = 4.8vw. */
     font-weight: 800;
     line-height: 150%;
     letter-spacing: 0rem;
 }
 
 .Title:hover {
-    font-family: "Figtree";
     color: var(--bkg-color);
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 150%;
-    letter-spacing: 0rem;
 }
 
 .Paragraph {
-    font-family: "Figtree";
+    font-family: "Figtree",sans-serif;
     color: var(--txt-preset-2);
     font-size: 1rem;
     font-weight: 500;
